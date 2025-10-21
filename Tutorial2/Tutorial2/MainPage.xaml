@@ -8,7 +8,7 @@
 
     <VerticalStackLayout Spacing="0">
 
-        <Label Text="Your Name and ID here" HorizontalOptions="Center" TextColor="#444" Margin="0,15"/>
+        <Label Text="Enouch Lim BCS23090060" HorizontalOptions="Center" TextColor="#444" Margin="0,15"/>
 
         <Image 
             Source="hq720.jpg"
