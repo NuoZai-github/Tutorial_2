@@ -71,7 +71,7 @@
         <Grid ColumnDefinitions="Auto, *" Padding="25, 10, 25, 20" ColumnSpacing="10">
 
             <Button Grid.Column="0"
-                    ImageSource="heart_icon.png"
+                    ImageSource="love.png"
                     BorderColor="LightGray"
                     BorderWidth="1"
                     BackgroundColor="White"
