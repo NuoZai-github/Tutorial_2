@@ -6,16 +6,16 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="White">
 
-
     <VerticalStackLayout Spacing="0">
 
-        <Label Text="Your Name and ID here"
+        <Label Text="Enouch Lim BCS23090060"
                HorizontalOptions="Center"
                TextColor="#444"
                Margin="0,15"/>
 
         <Image 
-            Source="pug_image.png"  Aspect="AspectFill"
+            Source="pug.png"
+            Aspect="AspectFill"
             HeightRequest="300"
             HorizontalOptions="Fill" />
 
@@ -37,23 +37,19 @@
                        FontSize="28"
                        FontAttributes="Bold"
                        TextColor="Black"/>
-                <Label Grid.Row="0" Grid.Column="1"
-                       Text="♂" 
-                       FontSize="24"
-                       TextColor="Black"
-                       VerticalOptions="Center"/>
+                <Image Grid.Row="0" Grid.Column="1" Source="male_icon.png" HeightRequest="20" VerticalOptions="Center"/>
 
                 <Label Grid.Row="1" Grid.Column="0"
                        Text="Pug"
                        FontSize="16"
                        TextColor="Gray"/>
                 <HorizontalStackLayout Grid.Row="1" Grid.Column="1" Spacing="5" VerticalOptions="Center">
-                    <Label Text="🕒" FontSize="14"/>
+                    <Image Source="clock_icon.png" HeightRequest="14"/>
                     <Label Text="1 year old" FontSize="14" TextColor="Gray"/>
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Spacing="5" Margin="0,5,0,0">
-                    <Label Text="📍" FontSize="14"/>
+                    <Image Source="location_icon.png" HeightRequest="14" Margin="0,3,0,0"/>
                     <Label Text="3B, Lorong 88, Taman Rantau Panjang, 96000 Sibu, Sarawak"
                            FontSize="14"
                            TextColor="Gray"
@@ -66,7 +62,8 @@
             <Grid ColumnDefinitions="Auto, *, Auto" VerticalOptions="Center">
                 <Image 
                     Grid.Column="0"
-                    Source="owner_avatar.png" HeightRequest="50"
+                    Source="owner.png"
+                    HeightRequest="50"
                     WidthRequest="50"
                     Aspect="AspectFill">
                     <Image.Clip>
@@ -100,26 +97,25 @@
 
         <BoxView VerticalOptions="FillAndExpand" />
 
-        <HorizontalStackLayout Spacing="10" Padding="25, 10, 25, 20">
-            <Button Text="♡" 
-                    FontSize="20"
+        <Grid ColumnDefinitions="Auto, *" Padding="25, 10, 25, 20" ColumnSpacing="10">
+            <Button Grid.Column="0"
                     BorderColor="LightGray"
                     BorderWidth="1"
                     BackgroundColor="White"
-                    TextColor="Gray"
                     WidthRequest="60"
                     HeightRequest="60"
-                    CornerRadius="30"/>
+                    CornerRadius="30">
+                <Image Source="love.png" Aspect="AspectFit" HeightRequest="24"/>
+            </Button>
 
-            <Button Text="Adoption"
+            <Button Grid.Column="1"
+                    Text="Adoption"
                     FontAttributes="Bold"
                     FontSize="18"
                     BackgroundColor="#FFD15B"
                     TextColor="Black"
-                    HorizontalOptions="FillAndExpand"
                     HeightRequest="60"
                     CornerRadius="30"/>
-        </HorizontalStackLayout>
-
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
