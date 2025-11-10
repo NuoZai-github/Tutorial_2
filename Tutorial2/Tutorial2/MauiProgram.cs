@@ -14,7 +14,7 @@ namespace Tutorial2
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-                .UsePrism((prism) =>
+                .UsePrism(new DryIocContainerExtension(), (prism) =>
                 {
                     prism.RegisterTypes(container =>
                     {
