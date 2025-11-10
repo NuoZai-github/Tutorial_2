@@ -1,26 +1,14 @@
 ﻿using System.Windows.Input;
-using Tutorial2.Models;        
-using Prism.Commands;         
-using Tutorial2.ViewModels;     
+using Tutorial2.Models;
+using Tutorial2.ViewModels;
+using Prism.Commands;
 
 namespace Tutorial2.ViewModels.Pages
 {
     public class MainPageViewModel : BaseViewModel
     {
-        private MyModel _model;
-        public MyModel Model
-        {
-            get { return _model; }
-            set { SetProperty(ref _model, value); }
-        }
-
-        private string _message;
-        public string Message
-        {
-            get { return _message; }
-            set { SetProperty(ref _message, value); }
-        }
-
+        public MyModel Model { get; set; }
+        public string Message { get; set; }
         private int Counter { get; set; }
 
         public ICommand TestCommand { get; set; }
@@ -35,7 +23,7 @@ namespace Tutorial2.ViewModels.Pages
         private void Count()
         {
             Counter++;
-            Message = $"Clicked {Counter}"; 
+            Message = $"Clicked {Counter}";
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
-using Prism; 
-using Prism.Ioc; 
-using Tutorial2.ViewModels.Pages; 
-using Tutorial2.Views.MainPage;   
-using Prism.DryIoc; 
+using Prism;
+using Prism.Ioc;
+using Tutorial2.ViewModels.Pages;
+using Tutorial2.Views.MainPage;
+using Prism.DryIoc;
 
 namespace Tutorial2
 {
@@ -14,7 +14,7 @@ namespace Tutorial2
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-                .UsePrism((prism) => 
+                .UsePrism((prism) =>
                 {
                     prism.RegisterTypes(container =>
                     {
@@ -22,7 +22,8 @@ namespace Tutorial2
                     })
                     .OnAppStart(app =>
                     {
-                        app.NavigateAsync(nameof(MainPage));
+                        // 使用您在步骤10中提供的字符串 "MainPage"
+                        app.NavigateAsync("MainPage");
                     });
                 })
                 .ConfigureFonts(fonts =>
@@ -38,4 +39,4 @@ namespace Tutorial2
             return builder.Build();
         }
     }
-}
+}    
