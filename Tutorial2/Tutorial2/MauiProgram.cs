@@ -1,4 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
+using Prism; 
+using Prism.Ioc; 
+using Tutorial2.ViewModels.Pages; 
+using Tutorial2.Views.MainPage;   
+using Prism.DryIoc; 
 
 namespace Tutorial2
 {
@@ -9,6 +14,17 @@ namespace Tutorial2
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UsePrism((prism) => 
+                {
+                    prism.RegisterTypes(container =>
+                    {
+                        container.RegisterForNavigation<MainPage, MainPageViewModel>();
+                    })
+                    .OnAppStart(app =>
+                    {
+                        app.NavigateAsync(nameof(MainPage));
+                    });
+                })
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -16,7 +32,7 @@ namespace Tutorial2
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
