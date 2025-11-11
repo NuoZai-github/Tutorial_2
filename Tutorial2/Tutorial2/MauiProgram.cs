@@ -22,7 +22,6 @@ namespace Tutorial2
                     })
                     .OnAppStart(app =>
                     {
-                        // 使用您在步骤10中提供的字符串 "MainPage"
                         app.NavigateAsync("MainPage");
                     });
                 })
